@@ -40,7 +40,7 @@ function question2() {
 }
 question2();
 
-//Jordan Yamada Edit funtion three
+//Jordan Yamada Edit function three
 function question3() {
   let SK = prompt('Did I come from South Korea').toLocaleLowerCase();
   if (SK === 'yes' || SK === 'y') {
@@ -57,7 +57,7 @@ function question3() {
 }
 question3();
 
-
+//Jordan Yamada Edit function four
 function question4() {
   let pet = prompt('Do I own any pets').toLocaleLowerCase();
   if (pet === 'yes' || pet === 'y') {
