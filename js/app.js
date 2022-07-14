@@ -6,6 +6,7 @@ function welcome() {
 }
 welcome();
 //Jordan Yamada Edit function one
+
 function question1() {
   let city = prompt('Do I live in Seattle').toLocaleLowerCase();
   if (city === 'yes' || city === 'y') {
@@ -21,6 +22,8 @@ function question1() {
   }
 }
 question1();
+//Jordan Yamada Edit function two
+
 function question2() {
   let country = prompt('Do I live in the United States').toLocaleLowerCase();
   if (country === 'yes' || country === 'y') {
