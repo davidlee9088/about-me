@@ -73,6 +73,8 @@ function question4() {
   }
 }
 question4();
+
+//Jordan Yamada Edit function 5
 function question5() {
   let food = prompt('Is my favorite food porkbelly?').toLocaleLowerCase();
   if (food === 'yes' || food === 'y') {
