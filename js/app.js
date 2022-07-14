@@ -5,6 +5,7 @@ function welcome() {
   document.getElementById('name').textContent = userName + ' WELCOME IN';
 }
 welcome();
+//Jordan Yamada Edit function one
 function question1() {
   let city = prompt('Do I live in Seattle').toLocaleLowerCase();
   if (city === 'yes' || city === 'y') {
