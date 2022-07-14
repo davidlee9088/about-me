@@ -122,21 +122,25 @@ function sixQuestion() {
 }
 sixQuestion();
 
-let sevenAttem = 7;
-let isCorrect = false;
-questionSeven: while (sevenAttem && !isCorrect) {
-  let test1 = ['porkbelly', 'sushi'];
-  let sevenResponse = prompt('porkbelly,tofu, sushi ,burrito, chips Two of these foods are my favorite please guesse my favorite food', 'Porkbelly, tofu');
-  for (let i = 0; i <= test1.length; i++) {
-    if (test1[i] === sevenResponse) {
-      alert('YOU ARE CORRECT WOW YOU KNOW ME WELL');
-      isCorrect = true;
-      break questionSeven;
+//Jordan Yamada Edit for question 7
+function sevenQuestion() {
+  let sevenAttem = 7;
+  let isCorrect = false;
+  questionSeven: while (sevenAttem && !isCorrect) {
+    let test1 = ['porkbelly', 'sushi'];
+    let sevenResponse = prompt('porkbelly,tofu, sushi ,burrito, chips Two of these foods are my favorite please guesse my favorite food', 'Porkbelly, tofu');
+    for (let i = 0; i <= test1.length; i++) {
+      if (test1[i] === sevenResponse) {
+        alert('YOU ARE CORRECT WOW YOU KNOW ME WELL');
+        isCorrect = true;
+        break questionSeven;
+      }
     }
+    alert('try again');
+    sevenAttem--;
   }
-  alert('try again');
-  sevenAttem--;
 }
+sevenQuestion();
 
 //display the answers
 // how to do correct answers
