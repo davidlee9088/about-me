@@ -5,34 +5,40 @@ function welcome() {
   document.getElementById('name').textContent = userName + ' WELCOME IN';
 }
 welcome();
-//Jordan Yamada Edit function one
+
+let counter = 0;
+
 
 function question1() {
   let city = prompt('Do I live in Seattle').toLocaleLowerCase();
   if (city === 'yes' || city === 'y') {
-    //console.log('yes I do live in Seattle');
+
     alert('yes I do live in Seattle');
+    counter += 1;
+    console.log(counter);
   }
   else if (city === 'no' || city === 'n') {
     alert('wrong I do live in Seattle');
-    //console.log('Wrong I do live in Seattle');
+
   }
   else {
     alert('Please input correct values');
   }
 }
 question1();
-//Jordan Yamada Edit function two
+
 
 function question2() {
   let country = prompt('Do I live in the United States').toLocaleLowerCase();
   if (country === 'yes' || country === 'y') {
     alert('yes I do live in the United States');
-    //console.log('yes I do live in the United States')
+    counter += 1;
+    console.log(counter);
+
   }
   else if (country === 'no' || country === 'n') {
     alert('wrong I do live in the United States');
-    //console.log('wrong I do live in the United States')
+
   }
   else {
     alert('Please input correct values, Y/Yes or N/No');
@@ -40,16 +46,18 @@ function question2() {
 }
 question2();
 
-//Jordan Yamada Edit function three
+
 function question3() {
   let SK = prompt('Did I come from South Korea').toLocaleLowerCase();
   if (SK === 'yes' || SK === 'y') {
     alert('yes I used to live in South Korea');
-    //console.log('yes I do live in the United States')
+    counter += 1;
+    console.log(counter);
+
   }
   else if (SK === 'no' || SK === 'n') {
     alert('wrong I am from South Korea');
-    //console.log(wrong, I am from South Korea')
+
   }
   else {
     alert('Please input correct values, Y/Yes or N/No');
@@ -57,16 +65,18 @@ function question3() {
 }
 question3();
 
-//Jordan Yamada Edit function four
+
 function question4() {
   let pet = prompt('Do I own any pets').toLocaleLowerCase();
   if (pet === 'yes' || pet === 'y') {
     alert('Incorrect, I do not have any pets');
-    //console.log('Incorrect, I do not have any pets')
+
   }
   else if (pet === 'no' || pet === 'n') {
     alert('You are right, I do not have any pets');
-    //console.log('You are right I do not have any pets')
+    counter += 1;
+    console.log(counter);
+
   }
   else {
     alert('Please input correct values, Y/Yes or N/No');
@@ -74,16 +84,17 @@ function question4() {
 }
 question4();
 
-//Jordan Yamada Edit function 5
+
 function question5() {
   let food = prompt('Is my favorite food porkbelly?').toLocaleLowerCase();
   if (food === 'yes' || food === 'y') {
     alert('yes it is');
-    //console.log('yes it is)
+    counter += 1;
+    console.log(counter);
   }
   else if (food === 'no' || food === 'n') {
     alert('Incorrect');
-    //console.log('Incorect')
+
   }
   else {
     alert('Please input correct values, Y/Yes or N/No');
@@ -91,7 +102,7 @@ function question5() {
 }
 question5();
 
-// Jordan Yamada Edit function 6
+
 function sixQuestion() {
   let favNum = '7';
   let attemptsRemaining = 4;
@@ -103,6 +114,8 @@ function sixQuestion() {
     alert(`I have ${attemptsRemaining - i} attempts remaining`);
     if (userResponse === favNum) {
       console.log('You are correct');
+      counter += 1;
+      console.log(counter);
       break;
     }
     else if (userResponse < favNum) {
@@ -122,25 +135,33 @@ function sixQuestion() {
 }
 sixQuestion();
 
-//Jordan Yamada Edit for question 7
+let test1 = ['porkbelly', 'sushi'];
 function sevenQuestion() {
-  let sevenAttem = 7;
+  let sevenAttem = 6;
   let isCorrect = false;
   questionSeven: while (sevenAttem && !isCorrect) {
-    let test1 = ['porkbelly', 'sushi'];
-    let sevenResponse = prompt('porkbelly,tofu, sushi ,burrito, chips Two of these foods are my favorite please guesse my favorite food', 'Porkbelly, tofu');
+    let sevenResponse = prompt('porkbelly,tofu, sushi ,burrito, chips Two of these foods are my favorite please guesse my favorite food', 'Porkbelly, tofu').toLocaleLowerCase();
+    console.log(sevenResponse);
     for (let i = 0; i <= test1.length; i++) {
       if (test1[i] === sevenResponse) {
         alert('YOU ARE CORRECT WOW YOU KNOW ME WELL');
         isCorrect = true;
+        counter++;
         break questionSeven;
       }
     }
-    alert('try again');
     sevenAttem--;
+    alert(`try again,you have ${sevenAttem} chances left`);
   }
+  alert('the correct answers were porkbelly or sushi');
 }
 sevenQuestion();
 
-//display the answers
-// how to do correct answers
+function totalright() {
+  alert(`You were correct ${counter}/7 questions`);
+}
+totalright();
+
+
+
+
